@@ -1,0 +1,50 @@
+:root {
+  font-family: 'DM Sans', sans-serif;
+  color: #f4f8fc;
+  background: #070b12;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --ink: #f4f8fc;
+  --muted: #a9bacb;
+  --line: rgba(193, 218, 237, 0.18);
+  --sky: #55b8f2;
+  --sky-light: rgba(53, 126, 181, 0.16);
+  --display: 'Space Grotesk', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background:
+    radial-gradient(circle at 78% 12%, rgba(36, 100, 153, 0.28), transparent 34%),
+    linear-gradient(125deg, #070b12 0%, #0a1728 54%, #102d4b 100%);
+  background-attachment: fixed;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--sky);
+  outline-offset: 4px;
+}
+
+::selection {
+  color: #ffffff;
+  background: #256c9f;
+}
