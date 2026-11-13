@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+  <defs>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientTransform="matrix(460 300 -360 552 910 170)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#164a72"/>
+      <stop offset="1" stop-color="#07111d"/>
+    </radialGradient>
+    <linearGradient id="blue" x1="200" x2="770" y1="500" y2="420" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4db8ff"/>
+      <stop offset="1" stop-color="#a1ddff"/>
+    </linearGradient>
+  </defs>
+  <path fill="url(#glow)" d="M0 0h1200v630H0z"/>
+  <path stroke="#4db8ff" stroke-opacity=".22" d="M56 56h1088v518H56z"/>
+  <circle cx="1020" cy="142" r="190" fill="#4db8ff" fill-opacity=".08"/>
+  <path stroke="#4db8ff" stroke-opacity=".45" stroke-width="2" d="M883 114h14v257h-14z"/>
+  <path fill="#4db8ff" fill-opacity=".85" d="M871 354h38v20h-38z"/>
+  <rect x="824" y="346" width="152" height="200" rx="14" fill="#0b2135" stroke="#bce9ff" stroke-opacity=".72"/>
+  <circle cx="900" cy="416" r="38" fill="#4db8ff" fill-opacity=".19"/>
+  <path stroke="#4db8ff" stroke-width="6" d="M872 415c0-16 12-29 28-29s28 13 28 29-12 29-28 29-28-13-28-29Z"/>
+  <text x="96" y="198" fill="#b9d8ea" font-family="Arial,sans-serif" font-size="20" font-weight="700" letter-spacing="5">PORTFOLIO / 2026</text>
+  <text x="92" y="322" fill="#f4f8fc" font-family="Arial,sans-serif" font-size="65" font-weight="700">Hi, I’m Christian</text>
+  <text x="92" y="405" fill="url(#blue)" font-family="Arial,sans-serif" font-size="74" font-weight="700">Jacob E. Bulan.</text>
+  <text x="96" y="480" fill="#a9bacb" font-family="Arial,sans-serif" font-size="23">BS Information Technology Student</text>
+</svg>
