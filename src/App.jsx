@@ -48,6 +48,8 @@ const navigation = [
   { label: 'Contact', to: '/contact' },
 ]
 
+const contactEmail = 'chritainjacob.bulan27@gmail.com'
+
 function Layout() {
   const [loading, setLoading] = useState(true)
   const [scrollProgress, setScrollProgress] = useState(0)
@@ -213,7 +215,7 @@ function Home() {
           <Lanyard
             frontImage={profilePhoto}
             backImage={profilePhoto}
-            strapColor="#4DB8FF"
+            strapColor="#ff7a1a"
             bio="I’m studying Information Technology and exploring web development, software, and creative problem-solving."
           />
         </div>
@@ -344,13 +346,53 @@ function Achievements() {
 }
 
 function Contact() {
+  const handleSubmit = event => {
+    event.preventDefault()
+    const formData = new FormData(event.currentTarget)
+    const name = String(formData.get('name') || '').trim()
+    const email = String(formData.get('email') || '').trim()
+    const message = String(formData.get('message') || '').trim()
+    const subject = `Portfolio message from ${name}`
+    const body = `Name: ${name}\nEmail: ${email}\n\n${message}`
+
+    window.location.href = `mailto:${contactEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+  }
+
   return (
     <section className="contact-page page-width">
       <p className="eyebrow"><span /> Thanks for stopping by</p>
-      <h1><span className="headline-line"><span>Let’s keep</span></span><span className="headline-line"><span className="highlight-word">in touch.</span></span></h1>
-      <p className="contact-copy">I’m a BS Information Technology student, always learning and building. I’m glad you took a look at my portfolio.</p>
-      <NavLink className="button button-dark contact-button magnetic-button" to="/projects" data-cursor="View">See my achievements <span aria-hidden="true">↗</span></NavLink>
-      <p className="contact-location"><span className="availability-dot" /> Christian Jacob E. Bulan · Information Technology Student</p>
+      <div className="contact-layout">
+        <div className="contact-info">
+          <h1><span className="headline-line"><span>Let’s keep</span></span><span className="headline-line"><span className="highlight-word">in touch.</span></span></h1>
+          <p className="contact-copy">I’m a BS Information Technology student, always learning and building. I’m glad you took a look at my portfolio.</p>
+          <div className="contact-links" aria-label="Contact links">
+            <a href={`mailto:${contactEmail}`} data-cursor="Email">
+              <span>Email</span><strong>{contactEmail}</strong><b aria-hidden="true">↗</b>
+            </a>
+            <a href="https://www.facebook.com/christianjacob.bulan/" target="_blank" rel="noreferrer" data-cursor="Facebook">
+              <span>Facebook</span><strong>Christian Jacob Bulan</strong><b aria-hidden="true">↗</b>
+            </a>
+          </div>
+          <NavLink className="button button-dark contact-button magnetic-button" to="/projects" data-cursor="View">See my achievements <span aria-hidden="true">↗</span></NavLink>
+          <p className="contact-location"><span className="availability-dot" /> Christian Jacob E. Bulan · Information Technology Student</p>
+        </div>
+        <form className="contact-form" onSubmit={handleSubmit} aria-describedby="contact-form-note">
+          <div className="form-field">
+            <label htmlFor="contact-name">Your name</label>
+            <input id="contact-name" name="name" type="text" autoComplete="name" required />
+          </div>
+          <div className="form-field">
+            <label htmlFor="contact-email">Your email</label>
+            <input id="contact-email" name="email" type="email" autoComplete="email" required />
+          </div>
+          <div className="form-field">
+            <label htmlFor="contact-message">Message</label>
+            <textarea id="contact-message" name="message" rows="6" maxLength="5000" required />
+          </div>
+          <button className="button button-dark" type="submit" data-cursor="Send">Send message</button>
+          <p id="contact-form-note" className="form-note">Submitting opens a prefilled draft in your email app.</p>
+        </form>
+      </div>
       <span className="contact-spark" aria-hidden="true"></span>
     </section>
   )

@@ -1,20 +1,21 @@
 :root {
-  font-family: 'DM Sans', sans-serif;
-  color: #f4f8fc;
-  background: #070b12;
+  font-family: 'Manrope', sans-serif;
+  color: #ffffff;
+  background: #090909;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  --ink: #f4f8fc;
-  --muted: #a9bacb;
-  --line: rgba(193, 218, 237, 0.18);
-  --sky: #4db8ff;
-  --sky-light: rgba(53, 126, 181, 0.16);
-  --display: 'Space Grotesk', sans-serif;
-  --deep: #070b12;
-  --panel: rgba(14, 37, 59, 0.72);
+  --ink: #ffffff;
+  --muted: rgba(255, 255, 255, 0.72);
+  --line: rgba(255, 255, 255, 0.14);
+  --sky: #ff7a1a;
+  --sky-light: rgba(255, 122, 26, 0.1);
+  --display: 'Instrument Serif', Georgia, serif;
+  --mono: 'JetBrains Mono', monospace;
+  --deep: #090909;
+  --panel: rgba(255, 255, 255, 0.06);
 }
 
 * {
@@ -31,15 +32,15 @@ body {
   min-height: 100vh;
   margin: 0;
   background:
-    radial-gradient(circle at 76% 10%, rgba(36, 100, 153, 0.34), transparent 30%),
-    radial-gradient(circle at 12% 70%, rgba(31, 90, 137, 0.12), transparent 25%),
-    linear-gradient(125deg, #070b12 0%, #0a1728 54%, #102d4b 100%);
+    radial-gradient(circle at 76% 10%, rgba(255, 122, 26, 0.14), transparent 30%),
+    radial-gradient(circle at 12% 70%, rgba(255, 122, 26, 0.06), transparent 25%),
+    linear-gradient(125deg, #090909 0%, #11100f 54%, #090909 100%);
   background-attachment: fixed;
 }
 
 body::before, body::after { position: fixed; z-index: -1; width: 42vw; height: 42vw; border-radius: 50%; content: ''; filter: blur(65px); opacity: .23; pointer-events: none; }
-body::before { top: -15vw; right: -10vw; background: #3d9ad0; animation: ambient-drift 18s ease-in-out infinite alternate; }
-body::after { bottom: -22vw; left: -15vw; background: #174f81; animation: ambient-drift 24s -8s ease-in-out infinite alternate-reverse; }
+body::before { top: -15vw; right: -10vw; background: #ff7a1a; animation: ambient-drift 18s ease-in-out infinite alternate; }
+body::after { bottom: -22vw; left: -15vw; background: #9c3e0b; animation: ambient-drift 24s -8s ease-in-out infinite alternate-reverse; }
 
 @keyframes ambient-drift { from { transform: translate3d(-2vw, -1vw, 0) scale(.85); } to { transform: translate3d(8vw, 6vw, 0) scale(1.18); } }
 
@@ -58,12 +59,12 @@ a:focus-visible {
 }
 
 ::selection {
-  color: #ffffff;
-  background: #176da8;
+  color: #090909;
+  background: #ff7a1a;
 }
 
 html {
-  scrollbar-color: #28658c #07111d;
+  scrollbar-color: #a84c12 #090909;
   scrollbar-width: thin;
 }
 
@@ -72,13 +73,13 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background: #07111d;
+  background: #090909;
 }
 
 ::-webkit-scrollbar-thumb {
-  border: 2px solid #07111d;
+  border: 2px solid #090909;
   border-radius: 999px;
-  background: #28658c;
+  background: #a84c12;
 }
 
 ::-webkit-scrollbar-thumb:hover {
